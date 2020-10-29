@@ -39,4 +39,5 @@ readdir(folder, (err, files) => {
             })
         }
     })
+    console.log("Done.");
 })
