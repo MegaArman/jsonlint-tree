@@ -15,6 +15,7 @@ var passed = 0
 var failed = 0
 
 readdir(folder, (err, files) => {
+	console.log("starting...");
     files.forEach(file => {
         if (file.endsWith('.json')) {
             fs.readFile(file, 'utf8', (err, data) => {
