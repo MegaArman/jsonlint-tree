@@ -15,10 +15,10 @@ var passed = 0
 var failed = 0
 
 readdir(folder, (err, files) => {
-	console.log("starting...");
+	console.log("validating files...");
     files.forEach(file => {
         if (file.endsWith('.json')) {
-            fs.readFile(file, 'utf8', (err, data) => {
+            fs.readFileSync(file, 'utf8', (err, data) => {
                 if (err) throw err
                 try {
                     jsonlint.parse(data)
