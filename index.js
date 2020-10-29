@@ -21,7 +21,7 @@ readdir(folder, (err, files) => {
                 if (err) throw err
                 try {
                     jsonlint.parse(data)
-                    console.log(check, file)
+                    //console.log(check, file)
                     passed++
                 }
                 catch (e) {
